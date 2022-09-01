@@ -1,5 +1,4 @@
 node {
-    def sparky-keycloak-auth
 
     stage('Clone repository') {
         checkout scm
