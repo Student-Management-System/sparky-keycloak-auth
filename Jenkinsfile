@@ -5,11 +5,11 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("ssedevelopment/sparky-keycloak-auth")
+        app = docker.build("e-learning-by-SSE/infrastructure-auth-keycloak")
     }
 	
     stage('Push image') {
-        docker.withRegistry('https://ghcr.io', '2ad31065-44e1-4850-a3b1-548e17aa6757') {
+        docker.withRegistry('https://ghcr.io', 'github-ssejenkins') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
