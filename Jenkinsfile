@@ -5,7 +5,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("e-learning-by-SSE/infrastructure-auth-keycloak")
+        app = docker.build("e-learning-by-sse/infrastructure-auth-keycloak")
     }
 	
     stage('Push image') {
